@@ -84,14 +84,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="h-screen flex justify-center items-center bg-slate-100 relative">
-        <Image
+      <main className="h-screen flex justify-center items-center bg-gradient-to-b from-slate-100 to-slate-500 relative">
+        {/* <Image
           src="/sinjaikab.png"
           layout="fill"
           alt="kabupaten sinjai"
           objectFit="cover"
           priority
-        />
+        /> */}
 
         <div className="container px-4 grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="grid grid-cols-2 gap-4">

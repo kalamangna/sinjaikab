@@ -9,7 +9,7 @@ const ImageGrid = ({ menu }) => {
         target="_blank"
         rel="noreferrer"
       >
-        <div className="h-20 w-20 relative rounded border-2 hover:shadow hover:rounded-full hover:bg-white hover:border-0">
+        <div className="h-20 w-20 relative rounded border hover:shadow hover:rounded-full hover:bg-white hover:border-0">
           <Image
             src={`/${menu.name}.png`}
             alt={`${menu.name} sinjai`}
