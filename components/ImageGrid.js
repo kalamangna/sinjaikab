@@ -5,16 +5,17 @@ const ImageGrid = ({ menu }) => {
   return (
     <Link href={menu.href}>
       <a
-        className="flex items-center justify-center p-2 lg:p-4 hover:bg-white hover:shadow hover:rounded"
+        className="flex items-center justify-center lg:py-2"
         target="_blank"
         rel="noreferrer"
       >
-        <div className="h-20 w-20 relative transition-all">
+        <div className="h-20 w-20 relative rounded border-2 hover:shadow hover:rounded-full hover:bg-white hover:border-0">
           <Image
             src={`/${menu.name}.png`}
             alt={`${menu.name} sinjai`}
             layout="fill"
             objectFit="contain"
+            priority
           />
         </div>
       </a>
