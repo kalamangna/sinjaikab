@@ -134,7 +134,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="absolute bottom-0 left-0 bg-slate-500 w-full">
+      <footer className="fixed bottom-0 left-0 bg-slate-500 w-full">
         <div className="container px-4 py-2 text-center text-sm mx-auto">
           &copy; {new Date().getFullYear()} Pemerintah Kabupaten Sinjai
         </div>
