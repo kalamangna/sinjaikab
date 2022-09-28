@@ -108,7 +108,7 @@ export default function Home() {
         <meta property="twitter:image" content={image} />
       </Head>
 
-      <main className="h-screen flex justify-center items-center bg-gradient-to-b from-slate-100 to-slate-500 relative">
+      <main className="h-screen flex flex-col items-center justify-center relative bg-slate-400">
         {/* <Image
           src="/sinjaikab.png"
           layout="fill"
@@ -117,7 +117,7 @@ export default function Home() {
           priority
         /> */}
 
-        <div className="container px-4 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="container px-4 mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="grid grid-cols-2 gap-4">
             {menusLeft.map((menu) => (
               <ImageGrid menu={menu} key={menu.name} />
@@ -133,6 +133,12 @@ export default function Home() {
           </div>
         </div>
       </main>
+
+      <footer className="absolute bottom-0 left-0 bg-slate-500 w-full">
+        <div className="container px-4 py-2 text-center text-sm mx-auto">
+          &copy; {new Date().getFullYear()} Pemerintah Kabupaten Sinjai
+        </div>
+      </footer>
     </div>
   )
 }
