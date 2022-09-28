@@ -1,6 +1,9 @@
 import Head from "next/head"
 import Image from "next/image"
+
 import ImageGrid from "../components/ImageGrid"
+import NameTag from "../public/nametag.png"
+import Bupati from "../public/bupati.png"
 
 export default function Home() {
   const title = "Pemerintah Kabupaten Sinjai"
@@ -108,37 +111,41 @@ export default function Home() {
         <meta property="twitter:image" content={image} />
       </Head>
 
-      <main className="h-screen flex flex-col items-center justify-center relative bg-slate-400">
-        {/* <Image
-          src="/sinjaikab.png"
-          layout="fill"
-          alt="kabupaten sinjai"
-          objectFit="cover"
-          priority
-        /> */}
+      <main className="h-screen flex flex-col items-center justify-end md:justify-center relative bg-slate-400">
+        <div className="absolute top-0 right-0">
+          <div className="relative w-52 h-14 md:w-96 md:h-24">
+            <Image
+              src={NameTag}
+              alt="Diskominfo Sinjai"
+              layout="fill"
+              objectFit="contain"
+              objectPosition="top"
+            />
+          </div>
+        </div>
 
-        <div className="container px-4 mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="grid grid-cols-2 gap-4">
+        <div className="container px-4 mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 overflow-auto">
+          <div className="col-span-2 md:order-2 flex justify-center items-end md:items-center">
+            <Image src={Bupati} alt="Bupati dan Wakil Bupati Sinjai" />
+          </div>
+
+          <div className="grid grid-cols-2 gap-4 md:order-1">
             {menusLeft.map((menu) => (
               <ImageGrid menu={menu} key={menu.name} />
             ))}
           </div>
 
-          <div className="hidden md:block col-span-2"></div>
-
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 md:order-3">
             {menusRight.map((menu) => (
               <ImageGrid menu={menu} key={menu.name} />
             ))}
           </div>
+
+          {/* <div className="col-span-2 text-center py-2 md:order-4 md:col-span-4">
+            &copy; {new Date().getFullYear()} Pemkab Sinjai
+          </div> */}
         </div>
       </main>
-
-      <footer className="fixed bottom-0 left-0 bg-slate-500 w-full">
-        <div className="container px-4 py-2 text-center text-sm mx-auto">
-          &copy; {new Date().getFullYear()} Pemerintah Kabupaten Sinjai
-        </div>
-      </footer>
     </div>
   )
 }
