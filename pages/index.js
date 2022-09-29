@@ -10,7 +10,7 @@ import WhiteBg from "../public/bg.jpg"
 export default function Home() {
   const title = "Pemerintah Kabupaten Sinjai"
   const description = "Website Resmi Pemerintah Kabupaten Sinjai"
-  const url = "https://sinjaikab.vercel.app"
+  const url = "https://sinjaikab.go.id/next"
   const image = `${url}/sinjaikab-meta.png`
 
   const menusLeft = [
@@ -86,7 +86,7 @@ export default function Home() {
   return (
     <div className="font-sans">
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/next/favicon.ico" />
 
         {/* Primary Meta Tags */}
         <title>{title}</title>

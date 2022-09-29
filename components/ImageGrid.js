@@ -11,7 +11,7 @@ const ImageGrid = ({ menu }) => {
       >
         <div className="h-20 w-20 lg:h-24 lg:w-24 relative rounded-2xl border shadow group-hover:rounded-full group-hover:bg-white group-hover:border-0">
           <Image
-            src={`/${menu.name}.png`}
+            src={`/next/${menu.name}.png`}
             alt={`${menu.name} sinjai`}
             layout="fill"
             objectFit="contain"
