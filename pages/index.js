@@ -2,8 +2,10 @@ import Head from "next/head"
 import Image from "next/image"
 
 import ImageGrid from "../components/ImageGrid"
+
 import NameTag from "../public/nametag.png"
 import Bupati from "../public/bupati.png"
+import WhiteBg from "../public/bg.jpg"
 
 export default function Home() {
   const title = "Pemerintah Kabupaten Sinjai"
@@ -111,15 +113,23 @@ export default function Home() {
         <meta property="twitter:image" content={image} />
       </Head>
 
-      <main className="h-screen flex flex-col items-center justify-end md:justify-center relative bg-slate-400">
+      <main className="h-screen flex flex-col items-center justify-end md:justify-center relative overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src={WhiteBg}
+            alt="White Background"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+
         <div className="absolute top-0 right-0">
-          <div className="relative w-52 h-14 md:w-96 md:h-24">
+          <div className="relative w-52 h-14 md:w-96 md:h-24 bg-white rounded-l-full shadow overflow-hidden">
             <Image
               src={NameTag}
               alt="Diskominfo Sinjai"
               layout="fill"
-              objectFit="contain"
-              objectPosition="top"
+              objectFit="cover"
             />
           </div>
         </div>
