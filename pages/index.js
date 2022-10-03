@@ -162,13 +162,18 @@ export default function Home() {
               alt="Diskominfo Sinjai"
               layout="fill"
               objectFit="cover"
+              placeholder="blur"
             />
           </div>
         </div>
 
         <div className="container px-4 mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="col-span-2 md:order-2 flex justify-center items-end md:items-center">
-            <Image src={Bupati} alt="Bupati dan Wakil Bupati Sinjai" />
+            <Image
+              src={Bupati}
+              alt="Bupati dan Wakil Bupati Sinjai"
+              placeholder="blur"
+            />
           </div>
 
           <div className="col-span-2 md:col-span-4 md:order-1 flex flex-col justify-center items-center">

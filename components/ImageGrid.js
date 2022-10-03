@@ -17,6 +17,7 @@ const ImageGrid = ({ menu }) => {
             objectFit="contain"
             priority
             className="scale-75 lg:group-hover:scale-95 transition-all"
+            placeholder="blur"
           />
         </div>
       </a>
